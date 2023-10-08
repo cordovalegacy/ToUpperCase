@@ -3,17 +3,16 @@ const capitalLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', '
 
 const upperCase = (word) => {
     let uppercasedWord = ''
-    for (let i = 0; i < word.length; i++) {
-        const index = letters.indexOf(word[i])
-        if (index !== -1) {
-            uppercasedWord += capitalLetters[index]
+    for (let i = 0; i < word.length; i++) { //regular for loop
+        const index = letters.indexOf(word[i]) //searching letters array for whichever value matches the word
+        if (index !== -1) { //check if index exists
+            uppercasedWord += capitalLetters[index] //add capital letter to uppercased word
         } else {
-            uppercasedWord += word[i]
+            uppercasedWord += word[i] //grab remaining letters in word
         }
     }
     return uppercasedWord
 }
 
-const lowercaseWord = 'hello'
-const uppercaseWord = upperCase(lowercaseWord)
+const uppercaseWord = upperCase("hello there")
 console.log(uppercaseWord)
