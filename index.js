@@ -5,7 +5,7 @@ const upperCase = (word) => {
     let uppercasedWord = ''
     for (let i = 0; i < word.length; i++) { //regular for loop
         const index = letters.indexOf(word[i]) //searching letters array for whichever value matches the word
-        if (index !== -1) { //check if index exists
+        if (index !== -1) { //check if it is already capitalized
             uppercasedWord += capitalLetters[index] //add capital letter to uppercased word
         } else {
             uppercasedWord += word[i] //grab remaining letters in word
